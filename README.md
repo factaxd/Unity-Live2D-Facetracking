@@ -1,15 +1,12 @@
-# VTuber Python Unity Tutorial
+# Unity - Live2D - Facetracking Tutorial
 
-An Implementation of VTuber (Both 3D and Live2D) using Python and Unity. Supporting **face movement tracking**, **eye blinking detection**, **iris detection and tracking** and **mouth movement tracking** using **CPU only**.
+An Implementation of VTuber (Live2D) using Python and Unity. Supporting **face movement tracking**, **eye blinking detection**, **iris detection and tracking** and **mouth movement tracking** using **CPU only**.
 
 ## Usage
 ![Live2D Demo](https://github.com/mmmmmm44/VTuber-Python-Unity/blob/main/Images/live2d_demo.gif)
 
 *Live2D Demo*
 
-![UnityChan 3D Demo](https://github.com/mmmmmm44/VTuber-Python-Unity/blob/main/Images/unitychan3d_demo.gif)
-
-*UnityChan 3D Demo*
 
 ## Features
 * Facial landmarks detection and movement tracking supported by Facemesh by [Mediapipe](https://github.com/google/mediapipe).
@@ -30,7 +27,7 @@ An Implementation of VTuber (Both 3D and Live2D) using Python and Unity. Support
 |stabilizer.py|Implementation of Kalman Filter to stabilize the values.|
 |facial_features.py|Various facial features detection implementation, including blinking, iris detection and mouth movement.|
 |model.txt|The points of the 3D Canonical model used in Mediapipe. [Source file](https://github.com/google/mediapipe/blob/master/mediapipe/modules/face_geometry/data/canonical_face_model.obj)|
-|UnityAssets|Whole Unity Projects (in packages) and Scripts (old version) for both 3D (UnityChan) and Live2D (Hiyori) models|
+|UnityAssets|Whole Unity Projects (in packages) and Scripts (old version) for Live2D (Hiyori) models|
 
 
 
@@ -68,11 +65,7 @@ python main.py --connect [--debug] [--port PORT]
 5. Enjoy
 
 
-### Custom Setup (YT Tutorial)
-
 #### For Live2D model
-
-Video Walkthrough: [Click Me!](https://youtu.be/3pBc9Wkzzos?t=30)
 
 1. Download the Cubism SDK For Unity from this [website](https://www.live2d.com/download/cubism-sdk/) and the sample model used (桃瀬ひより) from this [website](https://www.live2d.com/download/sample-data/)
 
@@ -94,29 +87,6 @@ python main.py --connect [--debug] [--port PORT]
 
 8. Enjoy
 
-#### For 3D Model (UnityChan)
-
-Video Walkthrough: [Click Me!](https://youtu.be/V6Wd2kPNbPY?t=180)
-
-1. Download the UnityChan model from the [website](https://unity-chan.com/). Go to "Data Download", accept the terms and agreements, and select the first one. Unzip the file.
-
-2. Create an empty Unity 3D Project. Drag the unzipped folder to the Project Window of the project.
-
-3. Go to UnityChan\Prefabs and Drag the "unitychan" prefab into the scene.
-
-4. Adjust the camera's position, background and field of view.
-
-5. Drag the UnityChanControl.cs script onto the prefab. __Change the update mode of the Animator attached to "Animate Physics" and the Controller to UnityChanLocomotions. (Crucial)__ Adjust the variables in the inspector. Disable other attached scripts except AutoBlink and UnityChanController. You may tick the box "is Auto Blink Active" in UnityChanContoller to enable auto blinking (enable AutoBlink script when ticked).
-
-6. Run the scene first
-
-7. Run the following code in terminal
-[content in the bracket is optional]
-```
-python main.py --connect [--debug] [--port PORT]
-```
-
-8. Enjoy
 
 **Make sure you run the Unity Scene first before running the python script**
 
