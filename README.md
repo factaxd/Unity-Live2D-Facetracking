@@ -1,4 +1,4 @@
-# Unity - Live2D - Facetracking Tutorial
+# Unity - Live2D - Facetracking 
 
 An Implementation of VTuber (Live2D) using Python and Unity. Supporting **face movement tracking**, **eye blinking detection**, **iris detection and tracking** and **mouth movement tracking** using **CPU only**.
 
